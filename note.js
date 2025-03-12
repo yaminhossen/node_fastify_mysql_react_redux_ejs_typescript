@@ -29,16 +29,6 @@ for (let i = 0; i < parseInt(body.attachment?.length); i++) {
  
 
 
-let user = (req as any).user;
-let auth_user = await models.BranchStaffsModel.findOne({
-    where: {
-        user_staff_id: (req as any).user.id,
-    },
-}); 
-
-branch_id: auth_user?.branch_id || 1,
-creator: user?.id || null,
-
 
 
 // select option thsi silast
