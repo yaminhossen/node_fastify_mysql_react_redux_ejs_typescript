@@ -1,0 +1,9 @@
+@hostname = http://127.0.0.1:5003/api/v1/user-students
+
+# all
+###
+GET {{hostname}}?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10 HTTP/1.1
+
+# get
+###
+GET {{hostname}}/1 HTTP/1.1
