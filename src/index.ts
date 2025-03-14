@@ -121,9 +121,9 @@ async function boot() {
     /** register all dependencies */
     console.log('\nsetup plugins \n');
     fastify
-        // .register(AutoLoad, {
-        //     dir: path.join(__dirname, 'plugins'),
-        // })
+        .register(AutoLoad, {
+            dir: path.join(__dirname, 'plugins'),
+        })
         .register(AutoLoad, {
             dir: path.join(__dirname, 'routes'),
         })
