@@ -3,7 +3,6 @@ import Fastify, {
     FastifyReply,
     FastifyRequest,
 } from 'fastify';
-import { env } from 'process';
 import path from 'path';
 import view from '@fastify/view';
 import { sequelize } from './bootstrap/db.sql';
@@ -170,11 +169,11 @@ async function boot() {
 
     fastify
         .setNotFoundHandler(function (req: FastifyRequest, res: FastifyReply) {
-            // (fastify as any).set_log('404', {}, res, req);
+            (fastify as any).set_log('404', {}, res, req);
         })
         .setErrorHandler(async (error, req, res) => {
             console.log(error);
-            // (fastify as any).set_log('500', error, res, req);
+            (fastify as any).set_log('500', error, res, req);
         })
         .addHook('onRequest', commonMiddleware as any)
         .addHook('onRequest', async (request, reply) => {

@@ -110,20 +110,20 @@ export let active_routes: string[] = [
     // 'src/modules/user_management/user_teachers/routes.ts',
 ];
 
-// function register_all_routes(fastify: FastifyInstance) {
-//     // require(path.resolve(appDir, routes)
-//     // fastify.register(AutoLoad, {
-//     fastify.register(
-//         require(
-//             path.resolve(
-//                 appDir,
-//                 'src/modules/user_management/user_students/routes.ts',
-//             ),
-//         ),
-//         {
-//             prefix: 'api/v1',
-//         },
-//     );
-// }
+function register_all_routes(fastify: FastifyInstance) {
+    // require(path.resolve(appDir, routes)
+    // fastify.register(AutoLoad, {
+    fastify.register(
+        require(
+            path.resolve(
+                appDir,
+                'src/modules/user_management/user_students/routes.ts',
+            ),
+        ),
+        {
+            prefix: 'api/v1',
+        },
+    );
+}
 
-// export default register_all_routes;
+export default register_all_routes;

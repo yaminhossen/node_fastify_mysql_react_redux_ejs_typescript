@@ -66,7 +66,8 @@
   },
   "scripts": {
     "test": "jest",
-
+    "student": "vite build --config vite-config-student.js --watch --sourcemap",
+    "client:sass": " npx sass public/assets/dashboard/scss/style.scss public/assets/dashboard/styles/style.css -w",
     "server": "nodemon"
 
   }
