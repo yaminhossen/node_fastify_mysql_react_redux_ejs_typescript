@@ -28,9 +28,10 @@ POST {{hostname}}/update HTTP/1.1
 content-type: application/json
 
 {
-    "id": 2,
+    "id": 1,
     "name": "Habib",
     "email": "habib@gamil.com",
     "phone_number": "01779876546",
+    "password": "12345678",
     "image": "/assets/dashboard/images/avatar.png"
 }
